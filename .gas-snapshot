@@ -1,5 +1,6 @@
+MerkleTree:testAllowed_map() (gas: 4486)
 MerkleTree:testNFTOwnership_balanceOf() (gas: 10070)
 MerkleTree:testNFTOwnership_merkle() (gas: 12539)
-MerkleTree:testNoOWnership_merkle() (gas: 6269)
-MerkleTree:testTokenOwnership_balanceOf() (gas: 9884)
+MerkleTree:testNoOwnership_merkle() (gas: 6269)
+MerkleTree:testTokenOwnership_balanceOf() (gas: 9973)
 MerkleTree:testTokenOwnership_merkle() (gas: 12605)
