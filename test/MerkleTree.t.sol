@@ -63,6 +63,7 @@ contract MerkleTree is Test {
     address private user5;
 
     bytes32 private merkleRoot;
+    mapping(address => bool) allowed;
 
     function setUp() public {
         token = new MockToken();
@@ -86,6 +87,8 @@ contract MerkleTree is Test {
         proof1 = merkle.getProof(data, 0);
         proof2 = merkle.getProof(data, 1);
 
+        allowed[user1] = true;
+
         token.mint(user1, MINT_AMOUNT);
         nft.mint(user2, TOKEN_ID);
     }
@@ -97,6 +100,14 @@ contract MerkleTree is Test {
     function testNFTOwnership_balanceOf() public {
         assertGt(nft.balanceOf(user2), 0, "did you not mint?");
     }
+
+    function testAllowed_map() public {
+        assertTrue(allowed[user1]);
+    }
+
+    /**
+     * Merkle tree things
+     */
 
     function _createLeafNode(address _user) internal pure returns (bytes32) {
         return keccak256(abi.encodePacked(_user));
@@ -120,7 +131,7 @@ contract MerkleTree is Test {
         assertTrue(result);
     }
 
-    function testNoOWnership_merkle() public {
+    function testNoOwnership_merkle() public {
         bytes32 leaf = _createLeafNode(user3);
         bytes32[] memory fakeProof = new bytes32[](1);
         fakeProof[0] = "lol";
