@@ -1,0 +1,13 @@
+[
+  "error DivFailed()",
+  "error DivWadFailed()",
+  "error ExpOverflow()",
+  "error FactorialOverflow()",
+  "error FullMulDivFailed()",
+  "error LnWadUndefined()",
+  "error MantissaOverflow()",
+  "error MulDivFailed()",
+  "error MulWadFailed()",
+  "error OutOfDomain()",
+  "error RPowOverflow()"
+]

@@ -25,7 +25,9 @@ contract MockToken is ERC20 {
 contract MockNFT is ERC721 {
     constructor() ERC721("Mock", "MCK") {}
 
-    function tokenURI(uint256 _id) public pure override returns (string memory) {
+    function tokenURI(
+        uint256 _id
+    ) public pure override returns (string memory) {
         return "MOCK";
     }
 
@@ -94,7 +96,11 @@ contract MerkleTree is Test {
     }
 
     function testTokenOwnership_balanceOf() public {
-        assertGt(token.balanceOf(user1), MIN_BALANCE, "Did you forget to mint?");
+        assertGt(
+            token.balanceOf(user1),
+            MIN_BALANCE,
+            "Did you forget to mint?"
+        );
     }
 
     function testNFTOwnership_balanceOf() public {
@@ -114,7 +120,10 @@ contract MerkleTree is Test {
     }
 
     // Needed public to convert storage/memory --> calldata
-    function _validateMerkle(bytes32[] calldata _proof, bytes32 _leaf) public view returns (bool) {
+    function _validateMerkle(
+        bytes32[] calldata _proof,
+        bytes32 _leaf
+    ) public view returns (bool) {
         // return merkle.verifyProof(merkleRoot, _proof, _leaf);
         return MerkleProofLib.verify(_proof, merkleRoot, _leaf);
     }

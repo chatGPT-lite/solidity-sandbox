@@ -54,7 +54,7 @@ contract NFT is Test {
     }
 
     function skip_testHugeMint_ERC721() public {
-        for (uint256 i = STARTING_MINT_ID; i < MINT_AMOUNT;) {
+        for (uint256 i = STARTING_MINT_ID; i < MINT_AMOUNT; ) {
             erc721.mint(address(this), i);
             unchecked {
                 ++i;

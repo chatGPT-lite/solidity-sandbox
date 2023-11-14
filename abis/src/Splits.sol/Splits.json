@@ -1,0 +1,8 @@
+[
+  "constructor(address)",
+  "function recipients(uint256) view returns (address)",
+  "function splitNative() payable",
+  "function splitToken(uint256)",
+  "function token() view returns (address)",
+  "function updateRecipients(address[])"
+]

@@ -1,10 +1,8 @@
-
 # Sandbox
-
 
 ## Files
 
-1) Merkle tree
+1. Merkle tree
 
 ```
 ├── script
@@ -14,9 +12,6 @@
     └── utils
         └── Utilities.sol
 ```
-
-
-
 
 ## NFT Tests
 
@@ -44,9 +39,9 @@
 | mint                                | 1933067042      | 1933067042 | 1933067042 | 1933067042 | 1       |
 ```
 
-
 Using this:https://www.cryptoneur.xyz/en/gas-fees-calculator
+
 - Standard Gas = 136 gwei
 - Matic = 1.15 rn.
-- ERC721: `25082000000 gwei` ==  **3922.8248 USD**
+- ERC721: `25082000000 gwei` == **3922.8248 USD**
 - ERC721A: `1933067042 gwei` == **302.3317 USD**
